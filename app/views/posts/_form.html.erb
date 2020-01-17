@@ -18,10 +18,13 @@
 
   <div class="form-group">
     <%= form.label :content %>
-    <%= form.text_area :content, class: "form-control", rows: 5 %>
+    <%= form.text_area :content, class: "tinymce", rows: 40, cols: 120 %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Create Post", class: "btn btn-primary btn-lg btn-block" %>
+    <%= form.submit class: "btn btn-primary btn-lg btn-block" %>
   </div>
 <% end %>
+
+<%= tinymce_assets %>
+<%= tinymce %>
