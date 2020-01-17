@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<h1>Posts</h1>
+
+<div class="list-group">
+  <% @posts.each do |post| %>
+    <%= link_to post, class: "list-group-item" do %>
+      <h4 class="list-group-item-heading"><%= post.title %></h4>
+      <p class="list-group-item-text">by <%= post.user.email %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Post', new_post_path, class: "btn btn-primary btn-lg" %>
+<% end %>
